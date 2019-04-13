@@ -1,0 +1,16 @@
+{
+	"filePath": [
+		"AElf",
+		"Wallet/walletInfo"
+	],
+	"fileDocs": [
+		{
+			"path": "AElf",
+			"name": "aelf.js"
+		},
+		{
+			"path": "Wallet",
+			"name": "wallet.js"
+		}
+	]
+}

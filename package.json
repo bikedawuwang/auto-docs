@@ -1,0 +1,30 @@
+{
+  "name": "auto-docs",
+  "version": "1.0.0",
+  "description": "auto-docs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "autoDocsCli": "./bin/autoDocsCli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bikedawuwang/auto-docs.git"
+  },
+  "keywords": [
+    "auto-docs"
+  ],
+  "author": "zmh3788",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bikedawuwang/auto-docs/issues"
+  },
+  "homepage": "https://github.com/bikedawuwang/auto-docs#readme",
+  "devDependencies": {
+    "commander": "^2.20.0",
+    "jsdoc-to-markdown": "^4.0.1"
+  },
+  "dependencies": {}
+}
