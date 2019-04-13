@@ -5,8 +5,8 @@
 */
 
 const fs = require('fs');
-const path = require('path');
-const setPath = require('../src/utils/setPath');
+// const path = require('path');
+const mkdirs = require('./utils/mkdirs');
 /**
  * path = {
  *  'path': {
@@ -18,8 +18,8 @@ const setPath = require('../src/utils/setPath');
 
 const dataPath = {
     filePath: [
-        'AElf',
-        'Wallet/walletInfo'
+        'docs/AElf',
+        'docs/Wallet/walletInfo'
     ],
     fileDocs: [{
         path: 'AElf',
@@ -37,23 +37,6 @@ function init() {
 }
 
 function create() {
-
-    fs.exists('docs', function (exists) {
-        if (!exists) {
-            fs.mkdir('docs', function (err) {
-                if (err) {
-                    console.log('创建文件夹出错！');
-                }
-                else {
-                    console.log('文件夹-创建成功！');
-                }
-            });
-        }
-        else {
-            console.log('文件夹-已存在！');
-        }
-    });
-
     fs.readFile('./autoDocs.json', 'utf-8', function (error, result) {
         if (error) {
             console.log('error', error);
@@ -65,11 +48,14 @@ function create() {
                 if (obj.filePath) {
                     new Promise((resolve, reject) => {
                         obj.filePath.map(item => {
-                            setPath(item);
+                            mkdirs(item);
                         });
+                        resolve(true);
                     }).then(result => {
-                        console.log('文件夹-创建完成！');
-                    })
+                        if (result) {
+                            console.log('文件夹-创建完成！');
+                        }
+                    });
                 }
             }
         }
