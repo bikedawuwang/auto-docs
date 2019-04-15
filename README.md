@@ -1,4 +1,4 @@
-# auto-docs
+# auto-js-docs
 
 A gadget that automatically generates document catalogs and outputs documents
 
