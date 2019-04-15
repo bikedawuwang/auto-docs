@@ -1,8 +1,5 @@
-/**
- * @file auto-docs-generate.js
- * @author zmh3788
- * @deprecated auto-docs-generate
-*/
+#!/usr/bin/env node
+'use strict'
 
 const program = require('commander');
 const autoDocs = require('../src/autoDocs');

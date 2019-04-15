@@ -1,13 +1,12 @@
 {
   "name": "auto-js-docs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "auto-js-docs",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "autodocs": "./bin/auto-docs.js"
+    "autodocs": "bin/auto-docs.js"
   },
   "repository": {
     "type": "git",
