@@ -6,14 +6,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "autodocs": "bin/auto-docs.js"
+    "autodocs2js": "./bin/auto-docs.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bikedawuwang/auto-docs.git"
   },
   "keywords": [
-    "auto-docs"
+    "auto-js-docs"
   ],
   "author": "zmh3788",
   "license": "MIT",
