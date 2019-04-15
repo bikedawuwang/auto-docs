@@ -27,7 +27,7 @@ A gadget that automatically generates document catalogs and outputs documents
 ```
 
 ```shell
-    autodocs2md create
+    autodocs2md create
 ```
 
 这会帮助你创建文档目录
