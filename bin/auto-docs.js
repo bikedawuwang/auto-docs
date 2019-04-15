@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-'use strict'
 
 const program = require('commander');
 const autoDocs = require('../src/autoDocs');
@@ -8,6 +7,7 @@ const autoDocs = require('../src/autoDocs');
 /**
  * Usage
 */
+process.title = 'autodocs2js';
 
 program
 .version(require('../package').version)

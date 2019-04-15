@@ -19,17 +19,11 @@ const mkdirs = require('./utils/mkdirs');
 
 const dataPath = {
     filePath: [
-        'docs/AElf',
-        'docs/Wallet/walletInfo'
+        'docs'
     ],
     fileDocs: [{
-        from: 'src/a.js',
-        to: 'docs/AElf',
-        name: 'aelf'
-    },
-    {
-        path: 'Wallet',
-        name: 'wallet.js'
+        from: 'src/test.js',
+        to: 'docs/test.md'
     }]
 };
 
@@ -71,7 +65,7 @@ function run() {
                 data.fileDocs.map(item => {
                     jsdoc2md.render(
                         {
-                            files: '../' + item.from
+                            files: item.from
                         }
                     ).then(result => {
                         fs.writeFileSync(item.to, result);
