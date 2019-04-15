@@ -5,6 +5,7 @@
 */
 
 const fs = require('fs');
+const jsdoc2md = require('jsdoc-to-markdown');
 // const path = require('path');
 const mkdirs = require('./utils/mkdirs');
 /**
@@ -22,8 +23,9 @@ const dataPath = {
         'docs/Wallet/walletInfo'
     ],
     fileDocs: [{
-        path: 'AElf',
-        name: 'aelf.js'
+        from: 'src/a.js',
+        to: 'docs/AElf',
+        name: 'aelf'
     },
     {
         path: 'Wallet',
@@ -43,7 +45,6 @@ function create() {
         }
         else {
             const obj = JSON.parse(result);
-            console.log(obj);
             if (obj) {
                 if (obj.filePath) {
                     new Promise((resolve, reject) => {
@@ -53,7 +54,7 @@ function create() {
                         resolve(true);
                     }).then(result => {
                         if (result) {
-                            console.log('文件夹-创建完成！');
+                            console.log('Directory creation completed！');
                         }
                     });
                 }
@@ -62,9 +63,31 @@ function create() {
     });
 }
 
+function run() {
+    fs.readFile('./autoDocs.json', 'utf-8', function (error, result) {
+        if (result) {
+            const data = JSON.parse(result);
+            if (data.fileDocs) {
+                data.fileDocs.map(item => {
+                    jsdoc2md.render(
+                        {
+                            files: '../' + item.from
+                        }
+                    ).then(result => {
+                        fs.writeFileSync(item.to, result);
+                        console.log(item.from, 'completed！');
+                    });
+                });
+            }
+
+        }
+    });
+}
+
 const autoDocs = {
     init,
-    create
+    create,
+    run
 };
 
 module.exports = autoDocs;

@@ -31,7 +31,6 @@ function mkdir(pos, pathArray) {
     }
 
     fs.exists(currentDir, function (exists) {
-        console.log(exists);
         if (!exists) {
             fs.mkdir(currentDir, function (err) {
                 mkdir(pos + 1, pathArray);

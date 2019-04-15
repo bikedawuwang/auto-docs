@@ -32,4 +32,12 @@ program
     autoDocs.create();
 });
 
+program
+.command('run')
+.description('run  -- create documents to different directories (short-cut alias: "r")')
+.alias('r')
+.action(function () {
+    autoDocs.run();
+});
+
 program.parse(process.argv);
