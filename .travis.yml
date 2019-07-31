@@ -5,5 +5,5 @@ install:
   npm install
 deploy:
   provider: npm
-  email: "zmh6774517"
+  email: "710101991@qq.com"
   api_key: "Zmh6774517"
