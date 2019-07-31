@@ -1,6 +1,6 @@
 {
   "name": "auto-js-docs",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A gadget that automatically generates document catalogs and outputs documents",
   "main": "index.js",
   "scripts": {
