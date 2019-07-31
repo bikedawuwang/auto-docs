@@ -3,7 +3,6 @@ node_js:
   - "11"
 install:
   npm install
-  npm run build
 deploy:
   provider: npm
   email: "zmh6774517"
