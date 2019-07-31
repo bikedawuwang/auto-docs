@@ -3,9 +3,6 @@
   "version": "1.0.9",
   "description": "A gadget that automatically generates document catalogs and outputs documents",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "bin": {
     "autodocs2md": "./bin/auto-docs.js"
   },
