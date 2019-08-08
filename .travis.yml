@@ -11,3 +11,6 @@ jobs:
         skip_cleanup: true
         on:
           tags: true
+      notifications:
+        email:
+          - 710101991@qq.com
