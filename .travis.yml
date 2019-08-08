@@ -11,6 +11,9 @@ jobs:
         skip_cleanup: true
         on:
           tags: true
-      notifications:
-        email:
-          - 710101991@qq.com
+notifications:
+  email:
+    recipients:
+      - 710101991@qq.com
+    on_success: always # default: change
+    on_failure: always # default: always
